@@ -1,0 +1,69 @@
+// Cameron Calhoun
+//
+// February 4, 2018
+//
+// Course: CS 1044, Section 201, Spring 19, Dr.Johnson
+//
+// Purpose: This program asks the user for the number of each ticket type they
+// want to buy. The program then calculates the subtotal, tax amount,
+// and total cost. The program also prints the subtotal, tax amount,
+// and total cost to the screen.
+//
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+const double P1 = 70;
+const double P2 = 45;
+const double P3 = 35;
+const double P4 = 30;
+const double P5 = 23;
+const double P6 = 17;
+const double tax = 0.0825;
+
+int main()
+{
+	cout << "Cameron Calhoun \n";
+	cout << "CMPS 1044 \n";
+	cout << "February 4, 2018 \n";
+	cout << "This program will ask for the number of tickets for each ";
+	cout << "ticket type, and will calculate the subtotal, tax amount, " "\n";
+	cout << "and overall cost. The program will also print these ";
+	cout << "calculations to the screen. \n\n";
+
+	int p1, p2, p3, p4, p5, p6;
+	double subtotal;
+	double tax_amount;
+	double overall_cost;
+	cout << "Please, enter the number of tickets for P1: ";
+	cin >> p1;
+	cout << "Please, enter the number of tickets for P2: ";
+	cin >> p2;
+	cout << "Please, enter the number of tickets for P3: ";
+	cin >> p3;
+	cout << "Please, enter the number of tickets for P4: ";
+	cin >> p4;
+	cout << "Please, enter the number of tickets for P5: ";
+	cin >> p5;
+	cout << "Please, enter the number of tickets for P6: ";
+	cin >> p6;
+
+	cout << "\n";
+
+	subtotal = (p1 * P1) + (p2 * P2) + (p3 * P3) + 
+	(p4 * P4) + (p5 * P5) + (p6 * P6);
+	cout << "Subtotal: $" << fixed << setprecision(2) << subtotal << "\n"; 
+	// Displays Subtotal amount of tickets.
+
+	tax_amount = subtotal * tax;
+	cout << "Tax Amount: $" << fixed << setprecision(2) << tax_amount << "\n";
+	// Displays the Tax Amount on the tickets.
+
+	overall_cost = subtotal + (tax_amount);
+	cout << "Total Cost: $" << fixed << setprecision(2);
+	cout << overall_cost << "\n";
+	// Displays the Total Cost of the tickets.
+
+	system("pause");
+	return 0;
+}
